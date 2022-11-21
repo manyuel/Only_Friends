@@ -1,1 +1,26 @@
-// Specific CSS for your home-page
+.container{
+  background-color: white;
+}
+
+.search{
+  border-radius: 60%;
+}
+
+.card-product-bottom img {
+  height: 70px;
+  flex-grow: 1;
+  margin: 0 8px;
+  object-fit: cover;
+}
+
+.card-product-bottom img:first-child {
+  margin-left: 0;
+}
+
+.card-product-bottom img:last-child {
+  margin-right: 0;
+}
+
+.card-product-bottom {
+  display: flex;
+}
