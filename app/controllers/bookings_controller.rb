@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.friend = @friend
     @booking.costumer = current_user
     if @booking.save!
-      redirect_to bookings_path
+      redirect_to confirmation_path(@booking)
     else
       render 'users/show', status: :unprocessable_entity
 

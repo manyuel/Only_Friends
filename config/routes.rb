@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :bookings, only: :create
   end
   resources :bookings, only: %i[index destroy]
+  get 'bookings/:id/confirmation', to: 'bookings#confirmation', as: 'confirmation'
 end
