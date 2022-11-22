@@ -4,6 +4,14 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :name,
+              required: true,
+              autofocus: true,
+              input_html: { autocomplete: "name" }%>
+    <%= f.input :bio,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "bio" }%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
