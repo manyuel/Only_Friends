@@ -1,13 +1,15 @@
 <h1>Your chosen friend</h2>
 
 <div>
-  <h1><%= "Name: #{@user.name}" %></h1>
-  <h3><%= "Rating: #{@user.rating}" %></h3>
-  <h3><%= "About me: #{@user.bio}" %></h3>
+  <p><%= "Name: #{@user.name}" %></p>
+  <p><%= "Rating: #{@user.rating}" %></p>
+  <p><%= "About me: #{@user.bio}" %></p>
 </div>
 
-
+<h5>Simply choose a date to request a rendesvouz</h5>
 <%= simple_form_for [@user, @booking] do |f| %>
   <%= f.input :date, label: "Choose a date that you'd like to meet", as: :date, html5: true %>
   <%= f.submit %>
 <% end %>
+
+<%= link_to "return to friends listings", users_path %>
