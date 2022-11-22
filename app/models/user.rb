@@ -5,15 +5,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-<<<<<<< HEAD
-  # validates :name, presence: true
-  # validates :bio, presence: true
-  # has_one_attached :photo
-  # has_many :friends
-  # has_many :bookings
-=======
   # validates :name, :email, presence: true
   # validates :email, uniqueness: true
   # validates :password, length: { in: 6..50 }
->>>>>>> 8426968e48de3892d0508df7efd40ea94b42f373
+  # has_one_attached :photo
+  has_many :primary_bookings, class_name: 'Booking', foreign_key: 'costumer_id'
+  has_many :secondary_bookings, class_name: 'Booking', foreign_key: 'friend_id'
 end
