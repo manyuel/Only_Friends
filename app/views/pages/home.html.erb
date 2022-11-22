@@ -1,2 +1,21 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render "shared/navbar" %>
+<div class = "container" >
+
+
+  <div class="d-flex justify-content-center mt-5">
+      <%= image_tag "header.png" %>
+  </div>
+    <div class="search d-flex justify-content-center py-3">
+      <form id="form">
+      <input type="search" id="query" name="q" placeholder="Location...">
+      <button><i class="fa-solid fa-magnifying-glass" id="glass"></i></button>
+      </form>
+    </div>
+      <div class="card-product-bottom">
+        <img src="https://source.unsplash.com/random" alt="" class="">
+        <img src="https://source.unsplash.com/random" alt="" class="">
+        <img src="https://source.unsplash.com/random" alt="" class="">
+      </div>
+
+
+</div>
