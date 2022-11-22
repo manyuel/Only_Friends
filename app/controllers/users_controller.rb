@@ -12,5 +12,4 @@ class UsersController < ApplicationController
       @users = User.all - current_user
     end
   end
-
 end
