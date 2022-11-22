@@ -1,0 +1,13 @@
+<h1>Your chosen friend</h2>
+
+<div>
+  <h1><%= "Name: #{@user.name}" %></h1>
+  <h3><%= "Rating: #{@user.rating}" %></h3>
+  <h3><%= "About me: #{@user.bio}" %></h3>
+</div>
+
+
+<%= simple_form_for [@user, @booking] do |f| %>
+  <%= f.input :date, label: "Choose a date that you'd like to meet", as: :date, html5: true %>
+  <%= f.submit %>
+<% end %>
