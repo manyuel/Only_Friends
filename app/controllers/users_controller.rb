@@ -6,10 +6,6 @@ class UsersController < ApplicationController
   end
 
   def index
-    if current_user.nil?
       @users = User.all
-    else
-      @users = User.all - current_user
-    end
   end
 end
