@@ -9,4 +9,17 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  // margin-left: 60px;
+  border-radius: 50%;
+}
+
+.see-friends-button {
+  button {
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }

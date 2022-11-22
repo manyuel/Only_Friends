@@ -1,5 +1,6 @@
-.container{
+.main-card{
   background-color: white;
+  height: 100%;
 }
 
 .search{
@@ -7,7 +8,7 @@
 }
 
 .card-product-bottom img {
-  height: 70px;
+  height: 300px;
   flex-grow: 1;
   margin: 0 8px;
   object-fit: cover;
@@ -15,6 +16,8 @@
 
 .card-product-bottom img:first-child {
   margin-left: 0;
+  border-radius: 8%;
+
 }
 
 .card-product-bottom img:last-child {
@@ -23,4 +26,36 @@
 
 .card-product-bottom {
   display: flex;
+  justify-content: space-around;
+}
+
+.card-pic{
+  img {
+    width: 350px;
+    height: 300px;
+
+  }
+}
+
+.landing{
+  margin-left: 74px;
+}
+
+.card-product-infos{
+  margin-left: 18px;
+  padding: 15px;
+  color: black;
+}
+
+#query{
+  border-radius: 10px;
+  border-width: thin;
+  border-color: #3bc4f4;
+}
+
+.searching{
+  border-radius: 10px;
+  background-color: white;
+  border-color: #3bc4f4;
+  border-width: thin;
 }
