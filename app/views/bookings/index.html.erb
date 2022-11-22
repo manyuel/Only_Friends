@@ -1,7 +1,21 @@
-<h1>YAY</h1>
+<h1>My Bookings</h1>
 
-<div class="bookingtext">
-  <p>Now sit back and wait for your friend to approve your rendesvouz,<p>
-  <p>once they have, its confirmed.</p>
-  <p>Boom!</p>
-</div>
+<h2>Confirmed Bookings</h2>
+
+
+<ul>
+    <li> <%= @bookings.where(confirmed?: true) %> </li>
+</ul>
+
+<h2>Pending Bookings</h2>
+
+<ul>
+    <li> <%= @bookings.where(confirmed?: false) %> </li>
+</ul>
+
+
+    <%# <%= if @user.role = customer %>
+      <%# <%= buttons.display: none %>
+    <%# <%= elsif @user.role = friend %>
+      <%# <%= buttons %>
+    <%# <% end %>
