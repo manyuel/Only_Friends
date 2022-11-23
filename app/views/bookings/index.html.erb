@@ -4,8 +4,9 @@
 
 <ul>
   <% @confirmed_bookings.each do |booking| %>
-    <%= link_to booking.friend.name, user_path(booking.friend) %>
-    <br><%= booking.friend.rating %>
+    <%= booking.friend.name %>
+    <%= booking.friend.rating %>
+    <%= link_to 'Cancel your meeting', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
   <% end %>
 </ul>
 
