@@ -10,16 +10,19 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="#">Account</a></li>
-              <li><a class="dropdown-item" href="#">Bookings</a></li>
+
+              <li><%=link_to "Bookings",
+                    bookings_path,
+                    class: "dropdown-item" %></li>
               <li><a class="dropdown-item" href="#">Log Out</a></li>
            </ul>
           </li>
        </ul>
     </div>
 
-      <div class="see-friends-button">
-        <%= link_to new_friend_path do %>
-          <button>All Friends</button>
+      <div class="all-friends-btn">
+        <%= link_to users_path, class: "text-decoration-none link-light" do %>
+          <p>All Friends</p>
         <% end %>
       </div>
 
