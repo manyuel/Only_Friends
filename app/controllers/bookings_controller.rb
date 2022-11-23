@@ -17,12 +17,11 @@ class BookingsController < ApplicationController
       redirect_to confirmation_path(@booking)
     else
       render 'users/show', status: :unprocessable_entity
-
     end
   end
 
   def show
-    @booking = User.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def destroy

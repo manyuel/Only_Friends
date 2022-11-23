@@ -1,0 +1,20 @@
+<% if @user.role = 'Customer' %>
+  <h1><%= "Send #{user.name} a hang-out request!" %></h2>
+
+  <div>
+    <h1><%= "Name: #{@user.name}" %></h1>
+    <h3><%= "Rating: #{@user.rating}" %></h3>
+    <h3><%= "About me: #{@user.bio}" %></h3>
+    <h3><%= "Rate: #{@user.rate}" %></h3>
+  </div>
+
+<% elsif @user.role = 'Friend' %>
+  <h1><%= "#{user.name} wants to be your friend!" %></h2>
+
+  <div>
+    <h1><%= "Name: #{@user.name}" %></h1>
+    <h3><%= "Rating: #{@user.rating}" %></h3>
+    <h3><%= "About me: #{@user.bio}" %></h3>
+  </div>
+
+<% end %>
