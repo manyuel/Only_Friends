@@ -15,6 +15,7 @@
   <% @pending_bookings.each do |booking| %>
     <%= booking.friend.name %>
     <%= booking.friend.rating %>
+    <%= link_to 'Cancel your meeting', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
   <% end %>
 </ul>
 
