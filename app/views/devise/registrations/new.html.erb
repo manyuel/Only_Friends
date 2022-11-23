@@ -8,6 +8,10 @@
               required: true,
               autofocus: true,
               input_html: { autocomplete: "name" }%>
+    <%= f.input :role,
+              required: true,
+              autofocus: true,
+              collection: User::ROLE %>
     <%= f.input :bio,
                 required: false,
                 autofocus: true,

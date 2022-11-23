@@ -9,4 +9,26 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  // margin-left: 60px;
+  border-radius: 50%;
+}
+
+.all-friends-btn{
+  background-color:#3bc4f4;
+  border-radius: 15px;
+  text-align: center;
+  height: 25px;
+  width: 120px;
+
+}
+
+
+
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
