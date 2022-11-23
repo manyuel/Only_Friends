@@ -1,5 +1,25 @@
 <h1>All friends 😏</h1>
 
-<% @users.each do |user|  %>
-  <%= link_to user.name, user_path(user) unless user == current_user %>
-<% end %>
+<%# <% @users.each do |user|  %>
+  <%# <%= link_to user.name, user_path(user) unless user == current_user %>
+<%# <% end %>
+<div class="container">
+   <div class="row">
+  <% @users.each do |user|  %>
+  <div class="col-lg-4">
+    <div class="card-pic">
+      <img src="https://source.unsplash.com/random/400x380" alt="" class="">
+        <%= link_to user_path(user), class: "text-decoration-none" do %>
+          <div class="card-product-infos">
+            <div>
+                <h3 class="class: "text-decoration-none link-light> <%=user.name%> </h3>
+                <p class="description"><%=user.bio%></p>
+            </div>
+                <p class="card-trip-pricing"><%= "£99" %> </p>
+          </div>
+        <% end %>
+    </div>
+  </div>
+  <% end %>
+  </div>
+</div>

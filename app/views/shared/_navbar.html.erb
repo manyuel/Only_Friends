@@ -20,10 +20,8 @@
        </ul>
     </div>
 
-      <div class="see-friends-button">
-        <%= link_to users_path do %>
-          <button>All Friends</button>
-        <% end %>
+      <div class="see-friends-btn">
+        <%= link_to "All Friends", users_path, class: "text-decoration-none link-light"%>
       </div>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
