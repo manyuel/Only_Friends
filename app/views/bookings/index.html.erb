@@ -1,0 +1,21 @@
+<h1>My Bookings</h1>
+
+<h2>Confirmed Bookings</h2>
+
+
+<ul>
+    <li> <%= @bookings.where(confirmed?: true) %> </li>
+</ul>
+
+<h2>Pending Bookings</h2>
+
+<ul>
+    <li> <%= @bookings.where(confirmed?: false) %> </li>
+</ul>
+
+
+    <%# <%= if @user.role = customer %>
+      <%# <%= buttons.display: none %>
+    <%# <%= elsif @user.role = friend %>
+      <%# <%= buttons %>
+    <%# <% end %>
