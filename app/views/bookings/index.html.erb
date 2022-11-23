@@ -4,8 +4,8 @@
 
 <ul>
   <% @confirmed_bookings.each do |booking| %>
-    <%= booking.friend.name %>
-    <%= booking.friend.rating %>
+    <%= link_to booking.friend.name, user_path(booking.friend) %>
+    <br><%= booking.friend.rating %>
   <% end %>
 </ul>
 
@@ -13,8 +13,8 @@
 
 <ul>
   <% @pending_bookings.each do |booking| %>
-    <%= booking.friend.name %>
-    <%= booking.friend.rating %>
+    <%= link_to booking.friend.name, user_path(booking.friend) %>
+    <br><%= booking.friend.rating %>
   <% end %>
 </ul>
 
