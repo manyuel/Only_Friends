@@ -6,7 +6,7 @@
   <p><%= "About me: #{@user.bio}" %></p>
 </div>
 
-<h5>Simply choose a date to request a rendesvouz</h5>
+<h5>Simply choose a date to request a rendezvouz</h5>
 <%= simple_form_for [@user, @booking] do |f| %>
   <%= f.input :date, label: "Choose a date that you'd like to meet", as: :date, html5: true %>
   <%= f.submit %>
