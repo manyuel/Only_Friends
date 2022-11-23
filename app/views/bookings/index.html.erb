@@ -1,18 +1,20 @@
-<<<<<<< HEAD
 <h1>My Bookings</h1>
 
 <h2>Confirmed Bookings</h2>
 
-
-<ul>
-    <li> <%= @bookings.where(confirmed?: true) %> </li>
-</ul>
+<%# <ul> %>
+  <%# <%= @bookings.name.each do |booking| %>
+    <%= @bookings.where(confirmed?: true) %>
+  <%# <% end %>
+<%# </ul> %>
 
 <h2>Pending Bookings</h2>
 
-<ul>
-    <li> <%= @bookings.where(confirmed?: false) %> </li>
-</ul>
+<%# <ul> %>
+  <%# <%= @bookings.name.each do |booking| %>
+    <%= @bookings.where(confirmed?: false) %>
+  <%# <% end %>
+<%# </ul> %>
 
 
     <%# <%= if @user.role = customer %>
