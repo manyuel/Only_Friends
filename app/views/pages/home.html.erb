@@ -1,21 +1,113 @@
-<%= render "shared/navbar" %>
-<div class = "container" >
-
-
-  <div class="d-flex justify-content-center mt-5">
+<div class = "main-card" >
+  <div class="d-flex justify-content-center">
       <%= image_tag "header.png" %>
   </div>
     <div class="search d-flex justify-content-center py-3">
       <form id="form">
       <input type="search" id="query" name="q" placeholder="Location...">
-      <button><i class="fa-solid fa-magnifying-glass" id="glass"></i></button>
+      <button class="searching"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
     </div>
-      <div class="card-product-bottom">
-        <img src="https://source.unsplash.com/random" alt="" class="">
-        <img src="https://source.unsplash.com/random" alt="" class="">
-        <img src="https://source.unsplash.com/random" alt="" class="">
+    <h2 class="landing">Newly Listed Friends</h2>
+    <div class="card-product-bottom">
+
+      <div class="card-pic">
+        <%= image_tag "theresa.jpeg" %>
+        <div class="card-product-infos">
+          <div>
+              <h3 class="title">Name</h3>
+              <p class="description">Bio</p>
+          </div>
+              <p class="card-trip-pricing">£99.99</p>
+            </div>
       </div>
 
+      <div class="card-pic">
+         <%= image_tag "boris.jpeg" %>
+        <div class="card-product-infos">
+          <div>
+              <h3>Name</h3>
+              <p>Bio</p>
+          </div>
+              <p class="card-trip-pricing">£99.99</p>
+            </div>
+      </div>
+
+      <div class="card-pic">
+        <%= image_tag "boris.jpeg" %>
+      <div class="card-product-infos">
+          <div>
+              <h3>Name</h3>
+              <p>Bio</p>
+          </div>
+              <p class="card-trip-pricing">£99.99</p>
+            </div>
+      </div>
+
+    </div>
+      <div class="card-product-bottom">
+
+      <div class="card-pic">
+         <%= image_tag "boris.jpeg" %>
+        <div class="card-product-infos">
+          <div>
+              <h3 class="title">Name</h3>
+              <p class="description">Bio</p>
+          </div>
+              <p class="card-trip-pricing">£99.99</p>
+            </div>
+      </div>
+
+      <div class="card-pic">
+        <img src="https://source.unsplash.com/random" alt="" class="ad-image">
+        <div class="card-product-infos">
+          <div>
+              <h3>Name</h3>
+              <p>Bio</p>
+          </div>
+              <p class="card-trip-pricing">£99.99</p>
+            </div>
+      </div>
+
+      <div class="card-pic">
+        <img src="https://source.unsplash.com/random" alt="" class="ad-image">
+      <div class="card-product-infos">
+          <div>
+              <h3>Name</h3>
+              <p>Bio</p>
+          </div>
+              <p class="card-trip-pricing">£99.99</p>
+            </div>
+      </div>
+
+    </div>
+
+      <div class="footer d-flex justify-content-end">
+        <div class="language d-flex justify-content-between p-2">
+          <i class="fa-solid fa-globe p-1" ></i>
+          <p>English</p>
+        </div>
+            <div class="currency d-flex justify-content-between p-2">
+            <i class="fa-solid fa-sterling-sign p-1"></i>
+            <p>GBP</p>
+            </div>
+      </div>
 
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          document.getElementById('nav').classList.add('fixed-top');
+          // add padding top to show content behind navbar
+          navbar_height = document.querySelector('.navbar').offsetHeight;
+          document.body.style.paddingTop = navbar_height + 'px';
+        } else {
+          document.getElementById('nav').classList.remove('fixed-top');
+          // remove padding top from body
+          document.body.style.paddingTop = '0';
+        }
+    });
+  });
+</script>
