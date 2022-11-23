@@ -10,7 +10,10 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="#">Account</a></li>
-              <li><a class="dropdown-item" href="#">Bookings</a></li>
+
+              <li><%=link_to "Bookings",
+                    bookings_path,
+                    class: "dropdown-item" %></li>
               <li><a class="dropdown-item" href="#">Log Out</a></li>
            </ul>
           </li>
