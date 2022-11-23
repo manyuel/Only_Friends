@@ -2,19 +2,21 @@
 
 <h2>Confirmed Bookings</h2>
 
-<%# <ul> %>
-  <%# <%= @bookings.name.each do |booking| %>
-    <%= @bookings.where(confirmed?: true) %>
-  <%# <% end %>
-<%# </ul> %>
+<ul>
+  <% @confirmed_bookings.each do |booking| %>
+    <%= booking.friend.name %>
+    <%= booking.friend.rating %>
+  <% end %>
+</ul>
 
 <h2>Pending Bookings</h2>
 
-<%# <ul> %>
-  <%# <%= @bookings.name.each do |booking| %>
-    <%= @bookings.where(confirmed?: false) %>
-  <%# <% end %>
-<%# </ul> %>
+<ul>
+  <% @pending_bookings.each do |booking| %>
+    <%= booking.friend.name %>
+    <%= booking.friend.rating %>
+  <% end %>
+</ul>
 
 
     <%# <%= if @user.role = customer %>
@@ -22,4 +24,3 @@
     <%# <%= elsif @user.role = friend %>
       <%# <%= buttons %>
     <%# <% end %>
-

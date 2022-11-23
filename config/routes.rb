@@ -9,9 +9,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :bookings, only: :create
   end
-  resources :bookings, only: %i[index destroy]
-
-  resources :bookings, only: %i[index show]
+  resources :bookings, only: %i[index show destroy]
 
   get 'bookings/:id/confirmation', to: 'bookings#confirmation', as: 'confirmation'
   get 'bookings/index', to: 'bookings#index'

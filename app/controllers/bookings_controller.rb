@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.where(user: current_user)
+    @bookings = Booking.where(costumer_id: current_user.id)
+    @confirmed_bookings = Booking.where(costumer_id: current_user.id, confirmed?: true)
+    @pending_bookings = Booking.where(costumer_id: current_user.id, confirmed?: false)
   end
 
   def new
