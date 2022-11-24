@@ -20,20 +20,22 @@
 }
 
 .Info{
-  width: 35%;
-  margin-left: 130px;
+  width: 38%;
   padding-top: 25px;
   border: solid;
   border-width: 7px;
   border-color: pink;
   padding-left: 20px;
   padding-bottom: 20px;
+  margin-right: 15px;
   color: #696969;
   font-weight: bold;
 }
 
 .Meeting{
-  margin-left: 30px;
+  margin-left: 9px;
+  display: flex;
+  justify-content: start;
 }
 
 .Booking{
@@ -41,10 +43,9 @@
   border-width: 7px;
   border-color: pink;
   padding-top: 25px;
-  margin-top: 15px;
-  width: 35%;
-  height: 50%;
-  margin-left: 130px;
+  width: 38%;
+  height: 70%;
+  margin-left: 30px;
   color: #696969;
   padding-left: 20px;
   padding-bottom: 20px;
@@ -52,4 +53,19 @@
 
 .full-carousel{
   width: 80%;
+}
+
+.idk{
+  padding-bottom: 50px;
+}
+
+.return-btn {
+  background-color:#eb89b5;
+  border-radius: 15px;
+  text-align: center;
+  top: 48%;
+  left: 45%;
+  padding: 10px;
+  width: 80%;
+  margin-left: 10%
 }
