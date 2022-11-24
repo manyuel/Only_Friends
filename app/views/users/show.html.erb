@@ -1,6 +1,7 @@
-<h2 class="d-flex px-4 py-3 ">Your chosen friend</h2>
+<div class="Container">
+ <h2 class="title3 ">Your chosen friend</h2>
 
-<div id="carouselExampleControls" class="carousel-slide" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="carousel-slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://post.healthline.com/wp-content/uploads/2020/05/Female_Male_Conversation_1200x628-facebook-1200x628.jpg" class="d-block w-100" alt="...">
@@ -20,15 +21,16 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+  </div>
 
-<div class="Info">
+  <div class="Info">
   <p><%= "Name: #{@user.name}" %></p>
   <p><%= "Rating: #{@user.rating}" %></p>
   <p><%= "About me: #{@user.bio}" %></p>
+  </div>
 </div>
 
-<h5>Simply choose a date to request a rendezvouz</h5>
+<h5 class="Meeting">Simply choose a date to request a rendezvouz</h5>
 <%= simple_form_for [@user, @booking] do |f| %>
   <%= f.input :date, label: "Choose a date that you'd like to meet", as: :date, html5: true %>
   <%= f.submit %>
