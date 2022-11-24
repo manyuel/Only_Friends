@@ -1,39 +1,49 @@
-<div class="Container">
+<div class="container3">
  <h2 class="title3 ">Your chosen friend</h2>
 
-  <div id="carouselExampleControls" class="carousel-slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://post.healthline.com/wp-content/uploads/2020/05/Female_Male_Conversation_1200x628-facebook-1200x628.jpg" class="d-block w-100" alt="...">
+  <div class="d-flex justify-content-center">
+    <div class="full-carousel">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://post.healthline.com/wp-content/uploads/2020/05/Female_Male_Conversation_1200x628-facebook-1200x628.jpg" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://post.healthline.com/wp-content/uploads/2019/09/Two-girlfriends-students-on-a-coffee-break-outdoors-1200x628-facebook.jpg" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/premium-photo/young-friends-from-diverse-cultures-races-taking-photo-making-happy-faces-youth-millennial-generation-friendship-concept-with-students-people-having-fun-together-focus-close-up-girls_166273-184.jpg?w=2000" class="d-block" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="https://post.healthline.com/wp-content/uploads/2019/09/Two-girlfriends-students-on-a-coffee-break-outdoors-1200x628-facebook.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://img.freepik.com/premium-photo/young-friends-from-diverse-cultures-races-taking-photo-making-happy-faces-youth-millennial-generation-friendship-concept-with-students-people-having-fun-together-focus-close-up-girls_166273-184.jpg?w=2000" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
   </div>
 
+  <div class="d-flex justifty-content-space-between">
   <div class="Info">
-  <p><%= "Name: #{@user.name}" %></p>
-  <p><%= "Rating: #{@user.rating}" %></p>
-  <p><%= "About me: #{@user.bio}" %></p>
+    <p><%= "Name: #{@user.name}" %></p>
+    <p><%= "Rating: #{@user.rating}" %></p>
+    <p><%= "About me: #{@user.bio}" %></p>
   </div>
+  <div class= "Booking">
+    <h5 class="Meeting">Simply choose a date to request a rendezvouz</h5>
+      <%= simple_form_for [@user, @booking] do |f| %>
+        <%= f.input :date, label: "Choose a date that you'd like to meet", as: :date, html5: true %>
+        <%= f.submit %>
+        <% end %>
+  </div>
+  </div>
+
 </div>
 
-<h5 class="Meeting">Simply choose a date to request a rendezvouz</h5>
-<%= simple_form_for [@user, @booking] do |f| %>
-  <%= f.input :date, label: "Choose a date that you'd like to meet", as: :date, html5: true %>
-  <%= f.submit %>
-<% end %>
+
 
 <%= link_to "return to friends listings", users_path %>

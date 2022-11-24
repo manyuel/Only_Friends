@@ -1,37 +1,55 @@
-.container{
-  align-items: flex-start;
+.container3{
+  background-color: #FFFBF3;
 }
-
 
 .title3{
   padding: 15px;
-  margin-left: 85px;
+  margin-left: 110px;
+  color: #696969 ;
+  font-size: 40px;
+  font-weight: bold;
 }
-
-.carousel-slide{
-  margin-left: 100px;
-}
-
 
 .carousel-inner{
-  width: 80%;
   padding-bottom: 20px;
-}
-
-.carousel-inner{
   img {
-    width: 200px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
 
 .Info{
-  width: 60%;
-  margin-left: 96px;
-  padding-top: 15px;
+  width: 35%;
+  margin-left: 130px;
+  padding-top: 25px;
+  border: solid;
+  border-width: 7px;
+  border-color: pink;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  color: #696969;
+  font-weight: bold;
 }
 
 .Meeting{
-  margin-left: 96px;
+  margin-left: 30px;
+}
+
+.Booking{
+  border: solid;
+  border-width: 7px;
+  border-color: pink;
+  padding-top: 25px;
+  margin-top: 15px;
+  width: 35%;
+  height: 50%;
+  margin-left: 130px;
+  color: #696969;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.full-carousel{
+  width: 80%;
 }
