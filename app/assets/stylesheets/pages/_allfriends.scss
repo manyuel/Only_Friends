@@ -1,6 +1,7 @@
 .card-pic{
   img {
     width: 100%;
+    border-radius: 20px;
   };
   height: 400px;
   text-align: center;
@@ -20,10 +21,15 @@
 .card-description, .card-trip-pricing {
   font-family: 'Merriweather', serif;
   color: #696969;
+  font-size: 18px;
 }
 
 .card-name, h1 {
   font-weight: bold;
   font-family: 'Merriweather', serif;
   color: #696969;
+}
+
+body {
+  background-color: #FFFBF3;
 }
