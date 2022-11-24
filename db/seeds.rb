@@ -16,8 +16,8 @@ abdul = User.create!(name: "Abdul Kareem", role: "Friend", rate: 85, location: "
 maggie = User.create!(name: "Maggie Poppy", role: "Friend", rate: 32.50, location: "Wesminster", rating: 0.1, bio: "Im Maggie, 3 times married and enjoy going to the cinema", email: "123@email.com", password: "password123")
 julia = User.create!(name: "Julia Jenkins", role: "Friend", rate: 438.79, location: "Hackney", rating: 4.99, bio: "Professional runner and loves a good sunbathe", email: "whatever@gmial.com", password: "password123")
 
-paulina = User.create!(name: "Paulina Rowling", role: "Friend", rate: 2.50, location: "Sweden", rating: 1.6, bio: "Im Maggie, 3 times married and enjoy going to the cinema", email: "paulina@email.com", password: "password123")
-pedro = User.create!(name: "Pedro Mendoza", role: "Friend", rate: 531.40, location: "Barcelona", rating: 4.20, bio: "Im a aspiring footballer and enjoy game-night", email: "pedror@gmial.com", password: "password123")
+paulina = User.create!(name: "Paulina Rowling", role: "Friend", rate: 2.55, location: "Sweden", rating: 1.6, bio: "Im Maggie, 3 times married and enjoy going to the cinema", email: "paulina@email.com", password: "password123")
+pedro = User.create!(name: "Pedro Mendoza", role: "Friend", rate: 531.49, location: "Barcelona", rating: 4.20, bio: "Im a aspiring footballer and enjoy game-night", email: "pedror@gmial.com", password: "password123")
 
 file = open("app/assets/images/lady1.jpeg")
 julia.photo.attach(io: file, filename: "nes.png", content_type: "image/jpeg")

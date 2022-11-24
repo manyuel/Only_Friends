@@ -1,5 +1,5 @@
 
-<h1 class="d-flex justify-content-center py-3">All friends 😏</h1>
+<h1 class="d-flex justify-content-center py-3">All friends</h1>
 
 
 <%# <% @users.each do |user|  %>
@@ -21,7 +21,7 @@
                 <h3 class="card-name" class="text-decoration-none" link-light> <%=user.name%> </h3>
                 <p class="card-description"><%=user.bio%></p>
             </div>
-                <p class="card-trip-pricing"><%= "£99" %> </p>
+                <p class="card-trip-pricing">£<%= user.rate %> </p>
           </div>
         <% end %>
     </div>
