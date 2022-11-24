@@ -12,21 +12,12 @@
         <%= link_to user_path(user), class: "text-decoration-none" do %>
           <div class="card-product-infos">
             <div>
-                <h3 class="card-name" class="text-decoration-none" link-light> <%=user.name%> </h3>
+                <h3 class="card-name" class="text-decoration-none" link-light> <%=user.name%></h3>
                 <p class="card-description"><%=user.bio%></p>
             </div>
-                <p class="card-trip-pricing">£<%= user.rate %> </p>
+                <p class="card-trip-pricing">£<%= user.rate %> per day </p>
           </div>
         <% end %>
-          <%= link_to user_path(user), class: "text-decoration-none" do %>
-            <div class="card-product-infos">
-              <div>
-                  <h3 class="class: "text-decoration-none link-light> <%=user.name%> </h3>
-                  <p class="description"><%=user.bio%></p>
-              </div>
-                  <p class="card-trip-pricing"><%= "£99" %> </p>
-            </div>
-          <% end %>
       </div>
     </div>
   <% end %>
