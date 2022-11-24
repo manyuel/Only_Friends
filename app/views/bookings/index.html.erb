@@ -8,10 +8,9 @@
     <ul>
       <% @confirmed_bookings.each do |booking| %>
         <div>
-          <%# <%= link_to booking.friend.name, user_path(user) %> %>
-          <%= booking.friend.name %>
+          <%= link_to booking.friend.name, user_booking_path(booking.friend, booking)%>
           <%= "| Rating: #{booking.friend.rating} | " %>
-          <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel?"}%>
         </div>
       <% end %>
     </ul>
@@ -23,10 +22,9 @@
     <ul>
       <% @pending_bookings.each do |booking| %>
         <div class="list">
-          <%# <%= link_to booking.friend.name, user_path(user) %> %>
-          <%= booking.friend.name %>
+          <%= link_to booking.friend.name, user_booking_path(booking.friend, booking)%>
           <%= "| Rating: #{booking.friend.rating} | " %>
-          <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel?"}%>
         </div>
       <% end %>
     </ul>
@@ -40,7 +38,7 @@
     <ul>
       <% @confirmed_bookings.each do |booking| %>
         <div>
-          <%= booking.costumer.name %>
+        <%= link_to booking.costumer.name, user_booking_path(booking.costumer, booking) %>
           <%= "| Rating: #{booking.costumer.rating} | " %>
           <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel?"}%>
         </div>
@@ -54,10 +52,10 @@
     <ul>
       <% @pending_bookings.each do |booking| %>
         <div class="list">
-          <%= booking.costumer.name %>
+          <%= link_to booking.costumer.name, user_booking_path(booking.costumer, booking) %>
           <%= "| Rating: #{booking.costumer.rating} | " %>
-          <%= link_to "Confirm | ", confirm_path(booking) %>
-          <%= link_to "Reject | ", reject_path(booking) %>
+          <%= link_to "Confirm", confirm_path(booking) %>
+          <%= link_to "Reject", reject_path(booking) %>
         </div>
       <% end %>
     </ul>

@@ -9,10 +9,9 @@ Rails.application.routes.draw do
   get 'bookings/:id/reject', to: 'bookings#reject', as: 'reject'
 
   resources :users do
-    resources :bookings, only: %i[new create]
+    resources :bookings, only: %i[new create show]
   end
-  resources :bookings, only: %i[index show destroy]
+  resources :bookings, only: %i[index destroy]
 
   get 'bookings/:id/confirmation', to: 'bookings#confirmation', as: 'confirmation'
-
 end
