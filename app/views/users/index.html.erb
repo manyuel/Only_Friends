@@ -10,7 +10,11 @@
   <% @users.each do |user|  %>
   <div class="col-lg-4">
     <div class="card-pic">
-      <img src="https://source.unsplash.com/random/400x380" alt="" class="">
+      <% if user.photo.attached? %>
+        <%= cl_image_tag user.photo.key %>
+      <% else %>
+        <img src="https://source.unsplash.com/random/400x380" alt="" class="">
+      <% end %>
         <%= link_to user_path(user), class: "text-decoration-none" do %>
           <div class="card-product-infos">
             <div>
