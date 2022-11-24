@@ -5,6 +5,9 @@
 .title3{
   padding: 15px;
   margin-left: 110px;
+  color: #696969 ;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .carousel-inner{
@@ -17,24 +20,34 @@
 }
 
 .Info{
-  width: 80%;
+  width: 35%;
   margin-left: 130px;
   padding-top: 25px;
   border: solid;
   border-width: 7px;
   border-color: pink;
-  border-radius: 7%;
   padding-left: 20px;
   padding-bottom: 20px;
+  color: #696969;
+  font-weight: bold;
 }
 
 .Meeting{
-  margin-left: 120px;
+  margin-left: 30px;
 }
 
 .Booking{
   border: solid;
-  width: 50%
+  border-width: 7px;
+  border-color: pink;
+  padding-top: 25px;
+  margin-top: 15px;
+  width: 35%;
+  height: 50%;
+  margin-left: 130px;
+  color: #696969;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 .full-carousel{
