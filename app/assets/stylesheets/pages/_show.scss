@@ -1,3 +1,18 @@
-.pic2{
-  border-radius: 50%;
+
+.carousel-inner{
+  width: 80%;
+  margin-left: 150px;
+}
+
+.carousel-inner{
+  img {
+    width: 200px;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+.Info{
+  margin-left: 150px;
+  padding-top: 15px;
 }
