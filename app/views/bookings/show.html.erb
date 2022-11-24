@@ -1,20 +1,72 @@
-<% if current_user.role = 'Costumer' %>
-  <h1><%= "Send #{user.name} a hang-out request!" %></h2>
+<% if current_user.role == 'Costumer' %>
 
-  <div>
-    <h2><%= "Name: #{@user.name}" %></h2>
-    <h3><%= "Rating: #{@user.rating}" %></h3>
-    <h3><%= "About me: #{@user.bio}" %></h3>
-    <%# <h3><%= "Rate: #{@user.rate}" %></h3> %>
+  <h2 class="d-flex px-4 py-3">Your chosen friend</h2>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://post.healthline.com/wp-content/uploads/2020/05/Female_Male_Conversation_1200x628-facebook-1200x628.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://post.healthline.com/wp-content/uploads/2019/09/Two-girlfriends-students-on-a-coffee-break-outdoors-1200x628-facebook.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.freepik.com/premium-photo/young-friends-from-diverse-cultures-races-taking-photo-making-happy-faces-youth-millennial-generation-friendship-concept-with-students-people-having-fun-together-focus-close-up-girls_166273-184.jpg?w=2000" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
-<% elsif current_user.role = 'Friend' %>
-  <h1><%= "#{user.name} wants to be your friend!" %></h2>
-
-  <div>
-    <h2><%= "Name: #{@user.name}" %></h2>
-    <h3><%= "Rating: #{@user.rating}" %></h3>
-    <h3><%= "About me: #{@user.bio}" %></h3>
+  <div class="Info">
+    <p><%= "Name: #{@booking.friend.name}" %></p>
+    <p><%= "Rating: #{@booking.friend.rating}" %></p>
+    <p><%= "Rate: #{@booking.friend.rate}" %></p>
+    <p><%= "About me: #{@booking.friend.bio}" %></p>
   </div>
+
+  <%= link_to "Return to My Bookings", users_path %>
+  <%= link_to "Return to Friends Listing", users_path %>
+
+<% elsif current_user.role == 'Friend' %>
+
+  <h2 class="d-flex px-4 py-3">You have a friendship request</h2>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://post.healthline.com/wp-content/uploads/2020/05/Female_Male_Conversation_1200x628-facebook-1200x628.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://post.healthline.com/wp-content/uploads/2019/09/Two-girlfriends-students-on-a-coffee-break-outdoors-1200x628-facebook.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.freepik.com/premium-photo/young-friends-from-diverse-cultures-races-taking-photo-making-happy-faces-youth-millennial-generation-friendship-concept-with-students-people-having-fun-together-focus-close-up-girls_166273-184.jpg?w=2000" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="Info">
+    <p><%= "Name: #{@booking.costumer.name}" %></p>
+    <p><%= "Rating: #{@booking.costumer.rating}" %></p>
+    <p><%= "About me: #{@booking.costumer.bio}" %></p>
+  </div>
+
+  <%= link_to "Return to My Bookings", bookings_path %>
+  <%= link_to "Return to Friends Listing", users_path %>
 
 <% end %>
