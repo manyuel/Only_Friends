@@ -1,87 +1,26 @@
+
 <div class = "main-card" >
-  <div class="d-flex justify-content-center">
-      <%= image_tag "header.png" %>
-  </div>
 
-    <div class="search d-flex justify-content-center py-3">
-      <form id="form">
-      <input type="search" id="query" name="q" placeholder="Location...">
-      <button class="searching"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
+
+
+  <div class="description">
+    <h1 class="title">Only Friends</h1>
+     <h3 class="slogan">Welcome to the friend-zone</h3>
+      <p class="info">A place to find and meet like-minded people near you.</p>
     </div>
-    <h2 class="landing">Newly Listed Friends</h2>
-    <div class="card-product-bottom">
-
-      <div class="card-image">
-        <%= image_tag "theresa.jpeg" %>
-        <div class="card-product-infos">
-          <div>
-              <h3 class="title">Theresa May</h3>
-              <p class="description">Likes running in fields of wheat, dislikes politics</p>
-          </div>
-              <p class="card-trip-pricing">£99.99</p>
-            </div>
-      </div>
-
-      <div class="card-image">
-          <%= image_tag "man1.jpeg" %>
-        <div class="card-product-infos">
-          <div>
-              <h3>Name</h3>
-              <p>Bio</p>
-          </div>
-              <p class="card-trip-pricing">£99.99</p>
-            </div>
-      </div>
-
-      <div class="card-image">
-        <%= image_tag "lady.jpeg" %>
-      <div class="card-product-infos">
-          <div>
-              <h3>Name</h3>
-              <p>Bio</p>
-          </div>
-              <p class="card-trip-pricing">£99.99</p>
-            </div>
-      </div>
-
+      <div class="wrap">
+        <div class="search">
+          <input type="text" class="searchTerm" placeholder="Enter a location to start...">
+            <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
     </div>
-      <div class="card-product-bottom">
 
-      <div class="card-image">
-         <%= image_tag "lady1.jpeg" %>
-        <div class="card-product-infos">
-          <div>
-              <h3 class="title">Name</h3>
-              <p class="description">Bio</p>
-          </div>
-              <p class="card-trip-pricing">£99.99</p>
+
+       <div class="photocard">
+          <%= image_tag "home.jpg", class:"homepic" %>
             </div>
-      </div>
-
-      <div class="card-image">
-         <%= image_tag "man.jpeg" %>
-        <div class="card-product-infos">
-          <div>
-              <h3>Name</h3>
-              <p>Bio</p>
-          </div>
-              <p class="card-trip-pricing">£99.99</p>
-            </div>
-      </div>
-
-      <div class="card-image">
-         <%= image_tag "boris.jpeg" %>
-      <div class="card-product-infos">
-          <div>
-              <h3>Name</h3>
-              <p>Bio</p>
-          </div>
-              <p class="card-trip-pricing">£99.99</p>
-            </div>
-      </div>
-
-    </div>
 
       <div class="footer d-flex justify-content-end">
         <div class="language d-flex justify-content-between p-2">
@@ -89,10 +28,9 @@
           <p>English</p>
         </div>
             <div class="currency d-flex justify-content-between p-2">
-            <i class="fa-solid fa-sterling-sign p-1"></i>
-            <p>GBP</p>
-            </div>
-      </div>
+              <i class="fa-solid fa-sterling-sign p-1"></i>
+                <p>GBP</p>
+                  </div>
 </div>
 
 <script>
@@ -105,7 +43,6 @@
           document.body.style.paddingTop = navbar_height + 'px';
         } else {
           document.getElementById('nav').classList.remove('fixed-top');
-          // remove padding top from body
           document.body.style.paddingTop = '0';
         }
     });
