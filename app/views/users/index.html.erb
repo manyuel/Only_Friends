@@ -2,13 +2,22 @@
 
 <div class="container">
    <div class="row">
-  <% @users.where(role: 'Friend').each do |user|  %>
-    <div class="col-lg-4">
+    <% @users.where(role: 'Friend').each do |user|  %>
+      <div class="col-lg-4">
       <div class="card-pic">
         <% if user.photo.attached? %>
-          <%= cl_image_tag user.photo.key %>
+          <%= cl_image_tag user.photo.key, width: 400, height: 250, crop: :fill %>
         <% else %>
           <img src="https://source.unsplash.com/random/400x380" alt="" class="">
+        <% end %>
+        <%= link_to user_path(user), class: "text-decoration-none" do %>
+          <div class="card-product-infos">
+            <div>
+                <h3 class="card-name" class="text-decoration-none" link-light> <%=user.name%> </h3>
+                <p class="card-description"><%=user.bio%></p>
+            </div>
+                <p class="card-trip-pricing"><%= "£99" %> </p>
+          </div>
         <% end %>
           <%= link_to user_path(user), class: "text-decoration-none" do %>
             <div class="card-product-infos">
