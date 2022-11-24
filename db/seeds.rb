@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 puts "Destroying all database..."
 Booking.destroy_all
 User.destroy_all
@@ -15,10 +16,10 @@ User.create!(name: "Boris Johnson", role: "Friend", rate: 85, location: "Uxbridg
 User.create!(name: "Theresa May", role: "Friend", rate: 32.50, location: "Wesminster", rating: 0.1, bio: "Likes running in fields of wheat, dislikes politics", email: "123@email.com", password: "password123")
 User.create!(name: "Professor Snape", role: "Friend", rate: 438.79, location: "Hackney", rating: 600, bio: "Professor of the dark arts and loves a good sunbathe", email: "whatever@gmial.com", password: "password123")
 
-puts "creating customers"
-User.create!(name: "Rick", role: "Customer", rating: 1, bio: "Likes boardgames & videogames", email: "rick@email.com", password: "password123")
-User.create!(name: "Mia", role: "Customer", rating: 2, bio: "Likes outdoors & brain teasers", email: "mia@email.com", password: "password123")
-User.create!(name: "Luke", role: "Customer", rating: 2.5, bio: "Likes food, biking and birds. Dislikes politics", email: "luke@email.com", password: "password123")
-User.create!(name: "Gilberto", role: "Customer", rating: 5, bio: "Likes to be alone but mom is worried about lack of friends", email: "gil@gmail.com", password: "password123")
+puts "creating costumers"
+User.create!(name: "Rick", role: "Costumer", rating: 1, bio: "Likes boardgames & videogames", email: "rick@email.com", password: "password123")
+User.create!(name: "Mia", role: "Costumer", rating: 2, bio: "Likes outdoors & brain teasers", email: "mia@email.com", password: "password123")
+User.create!(name: "Luke", role: "Costumer", rating: 2.5, bio: "Likes food, biking and birds. Dislikes politics", email: "luke@email.com", password: "password123")
+User.create!(name: "Gilberto", role: "Costumer", rating: 5, bio: "Likes to be alone but mom is worried about lack of friends", email: "gil@gmail.com", password: "password123")
 
 puts "finished"
