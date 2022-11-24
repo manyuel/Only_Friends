@@ -1,35 +1,67 @@
 <h1>My Bookings</h1>
 
-<div class="box">
-  <h2>Confirmed Bookings</h2>
+<% if current_user.role == 'Costumer' %>
 
-  <ul>
-    <% @confirmed_bookings.each do |booking| %>
-      <div>
-        <%= booking.friend.name %>
-        <%= Rating booking.friend.rating %>
-        <%= link_to 'Cancel your meeting', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-      </div>
-    <% end %>
-  </ul>
-</div>
+  <div class="box">
+    <h2>Confirmed Bookings</h2>
 
-<div class="box">
-<h2>Pending Bookings</h2>
+    <ul>
+      <% @confirmed_bookings.each do |booking| %>
+        <div>
+          <%# <%= link_to booking.friend.name, user_path(user) %> %>
+          <%= booking.friend.name %>
+          <%= booking.friend.rating %>
+          <%= link_to 'Cancel your meeting', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+        </div>
+      <% end %>
+    </ul>
+  </div>
 
-<ul>
-    <% @pending_bookings.each do |booking| %>
-      <div class="list">
-        <%= booking.friend.name %>
-        <%= booking.friend.rating %>
-        <%= link_to 'Cancel your meeting', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-      </div>
-    <% end %>
-  </ul>
-</div>
+  <div class="box">
+    <h2>Pending Bookings</h2>
 
-    <%# <%= if @user.role = customer %>
-      <%# <%= buttons.display: none %>
-    <%# <%= elsif @user.role = friend %>
-      <%# <%= buttons %>
-    <%# <% end %>
+    <ul>
+      <% @pending_bookings.each do |booking| %>
+        <div class="list">
+          <%# <%= link_to booking.friend.name, user_path(user) %> %>
+          <%= booking.friend.name %>
+          <%= booking.friend.rating %>
+          <%= link_to 'Cancel your meeting', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+
+<% elsif current_user.role == 'Friend' %>
+
+  <div class="box">
+    <h2>Confirmed Bookings</h2>
+
+    <ul>
+      <% @confirmed_bookings.each do |booking| %>
+        <div>
+          <%= booking.costumer.name %>
+          <%= booking.costumer.rating %>
+          <%= link_to 'Cancel your meeting', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Pending Bookings</h2>
+
+    <ul>
+      <% @pending_bookings.each do |booking| %>
+        <div class="list">
+          <%= booking.costumer.name %>
+          <%= booking.costumer.rating %>
+          <%= link_to "Confirm", confirm_path(booking) %>
+          <%= link_to "Reject", reject_path(booking) %>
+          <%= link_to 'Cancel your meeting', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+
+<% end  %>

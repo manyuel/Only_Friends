@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get 'bookings/:id/confirm', to: 'bookings#confirm', as: 'confirm'
+  get 'bookings/:id/reject', to: 'bookings#reject', as: 'reject'
 
   resources :users do
     resources :bookings, only: %i[new create]
@@ -12,8 +14,5 @@ Rails.application.routes.draw do
   resources :bookings, only: %i[index show destroy]
 
   get 'bookings/:id/confirmation', to: 'bookings#confirmation', as: 'confirmation'
-  get 'bookings/index', to: 'bookings#index'
-  get 'bookings/:id/confirm', to: 'bookings#confirm'
-  get 'bookings/:id/reject', to: 'bookings#reject'
 
 end

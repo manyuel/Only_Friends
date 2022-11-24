@@ -1,8 +1,16 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: %i[show destroy confirm reject]
+
   def index
-    @bookings = Booking.where(costumer_id: current_user.id)
-    @confirmed_bookings = Booking.where(costumer_id: current_user.id, confirmed?: true)
-    @pending_bookings = Booking.where(costumer_id: current_user.id, confirmed?: false)
+    if current_user.role == 'Costumer'
+      @bookings = Booking.where(costumer_id: current_user.id)
+      @confirmed_bookings = Booking.where(costumer_id: current_user.id, confirmed?: true)
+      @pending_bookings = Booking.where(costumer_id: current_user.id, confirmed?: false)
+    elsif current_user.role == 'Friend'
+      @bookings = Booking.where(friend_id: current_user.id)
+      @confirmed_bookings = Booking.where(friend_id: current_user.id, confirmed?: true)
+      @pending_bookings = Booking.where(friend_id: current_user.id, confirmed?: false)
+    end
   end
 
   def new
@@ -23,28 +31,30 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to bookings_path, status: :see_other
   end
 
   def confirm
     @booking.update(confirmed?: true)
-    redirect_to bookings_index_path, status: :see_other
+    redirect_to bookings_path, status: :see_other
   end
 
   def reject
     @booking.update(confirmed?: nil)
-    redirect_to bookings_index_path, status: :see_other
+    redirect_to bookings_path, status: :see_other
   end
 
   private
 
   def booking_params
     params.require(:booking).permit(:date)
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
   end
 end
