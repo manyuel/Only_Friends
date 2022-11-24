@@ -14,7 +14,7 @@ puts "creating friends"
 User.create!(name: "Harry Potter", role: "Friend", rate: 320, location: "Surrey", rating: 4.8, bio: "Likes playing quidditch, long walks in the forbidden forests", email: "hello@email.com", password: "password123")
 User.create!(name: "Boris Johnson", role: "Friend", rate: 85, location: "Uxbridge", rating: 3.5, bio: "Likes making fun of poor people, tackling children and zip-lining across London", email: "bye@email.com", password: "password123")
 User.create!(name: "Theresa May", role: "Friend", rate: 32.50, location: "Wesminster", rating: 0.1, bio: "Likes running in fields of wheat, dislikes politics", email: "123@email.com", password: "password123")
-User.create!(name: "Professor Snape", role: "Friend", rate: 438.79, location: "Hackney", rating: 600, bio: "Professor of the dark arts and loves a good sunbathe", email: "whatever@gmial.com", password: "password123")
+User.create!(name: "Professor Snape", role: "Friend", rate: 438.79, location: "Hackney", rating: 4.99, bio: "Professor of the dark arts and loves a good sunbathe", email: "whatever@gmial.com", password: "password123")
 
 puts "creating costumers"
 User.create!(name: "Rick", role: "Costumer", rating: 1, bio: "Likes boardgames & videogames", email: "rick@email.com", password: "password123")
