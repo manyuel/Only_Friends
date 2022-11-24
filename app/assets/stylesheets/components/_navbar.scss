@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #fffbf3;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,19 +8,65 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 150px;
   // margin-left: 60px;
-  border-radius: 50%;
 }
 
-.see-friends-btn{
-  background-color:#3bc4f4;
-  border-radius: 15px;
+.logo{
+  height: 50px;
+
+}
+
+
+.search {
+  width: 100%;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: 	#696969;
+  border: none;
+
+}
+
+.searchTerm:focus{
+  color: #696969;
+}
+
+.searchButton {
+  width: 50px;
+  height: 36px;
+  border: none;
+  background: #f2b5d0;
   text-align: center;
-  height: 25px;
-  width: 120px;
-
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
 }
+
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+// .see-friends-btn{
+//   background-color:#3bc4f4;
+//   border-radius: 15px;
+//   text-align: center;
+//   height: 25px;
+//   width: 120px;
+
+// }
 
 
 
