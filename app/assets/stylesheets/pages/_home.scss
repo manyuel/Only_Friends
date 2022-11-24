@@ -2,26 +2,85 @@
   background-color: white;
   height: 100%;
 }
-
-.search{
-  border-radius: 60%;
+.description{
+ align-items: center;
+ text-align: center;
+ color:	#696969;
+ height: 270px;
+ padding-top: 15px;
 }
 
-.card-product-bottom img {
-  height: 300px;
-  flex-grow: 1;
-  margin: 0 8px;
-  object-fit: cover;
+.title{
+  padding-bottom: 5px;
+  padding-top: 12px;
+  font-size: 95px;
 }
 
-.card-product-bottom img:first-child {
-  margin-left: 0;
-  border-radius: 8%;
+.slogan{
+  padding-bottom: 10px;
+}
+
+.info{
+  font-style: italic;
+  font-weight: lighter;
+  padding-bottom: 8px;
+}
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: 	#696969;
+  border: none;
 
 }
 
-.card-product-bottom img:last-child {
-  margin-right: 0;
+.searchTerm:focus{
+  color: #696969;
+}
+
+.searchButton {
+  width: 50px;
+  height: 36px;
+  border: none;
+  background: #f2b5d0;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.photocard{
+  position: relative;
+}
+
+.homepic{
+  width: 100%;
+  height: 700px;
+
 }
 
 .card-product-bottom {
@@ -29,36 +88,26 @@
   justify-content: space-around;
 }
 
-.card-image{
-  img {
-    width: 350px;
-    height: 300px;
-
-  }
-}
 
 .landing{
   margin-left: 74px;
 }
 
-.card-product-infos{
-  margin-left: 18px;
-  padding: 15px;
-  color: black;
-}
 
-#query{
-  border-radius: 10px;
-  border-width: thin;
-  border-color: #3bc4f4;
-}
 
-.searching{
-  border-radius: 10px;
-  background-color: white;
-  border-color: #3bc4f4;
-  border-width: thin;
-}
+// #query{
+//   border-radius: 10px;
+//   border-width: thin;
+//   border-color: #e45d9a;
+//   width: 300px;
+// }
+
+// .searching{
+//   border-radius: 10px;
+//   background-color: white;
+//   border-color: #e45d9a;
+//   border-width: thin;
+// }
 
 .card-trip-user{
   border-radius: 50%;
