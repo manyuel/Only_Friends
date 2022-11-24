@@ -6,21 +6,29 @@
   <div class="description">
     <h1 class="title">Only Friends</h1>
      <h3 class="slogan">Welcome to the friend-zone</h3>
-      <p class="info">A place to find and meet like-minded people near you.</p>
+      <p class="info">A place to find and meet like-minded people near you</p>
     </div>
-      <div class="wrap">
+      <%# <div class="wrap">
         <div class="search">
           <input type="text" class="searchTerm" placeholder="Enter a location to start...">
             <button type="submit" class="searchButton">
             <i class="fa fa-search"></i>
           </button>
         </div>
-    </div>
+    </div> %>
 
 
        <div class="photocard">
           <%= image_tag "home.jpg", class:"homepic" %>
             </div>
+
+        <div class="see-friends-btn">
+        <% if user_signed_in? && current_user.role == "Costumer" %>
+          <%= link_to "My Bookings", bookings_path, class: "text-decoration-none link-light"%>
+        <% else %>
+          <%= link_to "View All Friends", users_path, class: "text-decoration-none link-light"%>
+        <% end %>
+        </div>
 
       <div class="footer d-flex justify-content-end">
         <div class="language d-flex justify-content-between p-2">
