@@ -1,31 +1,26 @@
+<h1 class="d-flex justify-content-center py-3">All friends</h1>
 
-<h1 class="d-flex justify-content-center py-3">All friends 😏</h1>
-
-
-<%# <% @users.each do |user|  %>
-  <%# <%= link_to user.name, user_path(user) unless user == current_user %>
-<%# <% end %>
 <div class="container">
    <div class="row">
-  <% @users.each do |user|  %>
-  <div class="col-lg-4">
-    <div class="card-pic">
-      <% if user.photo.attached? %>
-        <%= cl_image_tag user.photo.key %>
-      <% else %>
-        <img src="https://source.unsplash.com/random/400x380" alt="" class="">
-      <% end %>
-        <%= link_to user_path(user), class: "text-decoration-none" do %>
-          <div class="card-product-infos">
-            <div>
-                <h3 class="class: "text-decoration-none link-light> <%=user.name%> </h3>
-                <p class="description"><%=user.bio%></p>
-            </div>
-                <p class="card-trip-pricing"><%= "£99" %> </p>
-          </div>
+  <% @users.where(role: 'Friend').each do |user|  %>
+    <div class="col-lg-4">
+      <div class="card-pic">
+        <% if user.photo.attached? %>
+          <%= cl_image_tag user.photo.key %>
+        <% else %>
+          <img src="https://source.unsplash.com/random/400x380" alt="" class="">
         <% end %>
+          <%= link_to user_path(user), class: "text-decoration-none" do %>
+            <div class="card-product-infos">
+              <div>
+                  <h3 class="class: "text-decoration-none link-light> <%=user.name%> </h3>
+                  <p class="description"><%=user.bio%></p>
+              </div>
+                  <p class="card-trip-pricing"><%= "£99" %> </p>
+            </div>
+          <% end %>
+      </div>
     </div>
-  </div>
   <% end %>
   </div>
 </div>
