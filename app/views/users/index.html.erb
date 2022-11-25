@@ -12,8 +12,9 @@
               <img src="https://source.unsplash.com/random/400x250" alt="" class="">
             <% end %>
               <div class="card-product-infos bg-light rounded-bottom">
-                <div>
+                <div class="d-flex text-start">
                     <h3 class="card-name text-decoration-none" link-light> <%=user.name%> </h3>
+                    <p>⭐ <%= user.rating %>
                     <p class="card-description"><%=user.bio%></p>
                 </div>
                     <p class="card-trip-pricing">£<%= user.rate %> </p>
