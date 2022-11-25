@@ -2,14 +2,14 @@
 
 <div class="container">
   <div class="row">
-    <% @users.where(role: 'Friend').each do |user|  %>
+    <% @users.each do |user|  %>
       <div class="col-lg-4">
         <div class="card-pic">
           <%= link_to user_path(user), class: "text-decoration-none" do %>
             <% if user.photo.attached? %>
               <%= cl_image_tag user.photo.key, width: 400, height: 250, crop: :fill %>
             <% else %>
-              <img src="https://source.unsplash.com/random/400x380" alt="" class="">
+              <img src="https://source.unsplash.com/random/400x250" alt="" class="">
             <% end %>
               <div class="card-product-infos bg-light rounded-bottom">
                 <div>
