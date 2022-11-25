@@ -7,10 +7,15 @@
 
   <div class=<%= current_page?(root_path) ? "d-none" : "wrap" %>>
     <div class="search">
-      <input type="text" class="searchTerm" placeholder="Enter a location to start...">
-        <button type="submit" class="searchButton">
+        <%= form_with url: users_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :location,
+            params[:location],
+            class: "form-control",
+            placeholder: "Search by Location"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
         <i class="fa fa-search"></i>
-      </button>
     </div>
   </div>
 

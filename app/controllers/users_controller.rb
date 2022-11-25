@@ -7,5 +7,11 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+
+    if params[:query].present?
+      @users = User.where(location: params[:location])
+    else
+      @movies = User.all
+    end
   end
 end
