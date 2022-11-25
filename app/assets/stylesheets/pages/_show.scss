@@ -1,6 +1,15 @@
 .container3{
   background-color: #FFFBF3;
+  h1,h2,h3{
+    font-family: serif;
+    p{
+      font-family: sans-serif;
+    }
+  }
+
 }
+
+
 
 .title3{
   padding: 15px;
@@ -25,13 +34,12 @@
   margin-left: 140px;
   padding-top: 25px;
   border: solid;
-  border-width: 7px;
+  border-width: 3px;
   border-color: pink;
   padding-left: 20px;
   padding-bottom: 20px;
   color: #696969;
-  font-weight: bold;
-  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 10px;
 }
 
 .Meeting{
@@ -40,7 +48,7 @@
 
 .Booking{
   border: solid;
-  border-width: 7px;
+  border-width: 3px;
   border-color: pink;
   padding-top: 25px;
   width: 38%;
@@ -50,6 +58,7 @@
   padding-left: 20px;
   padding-bottom: 20px;
   font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 10px;
 }
 
 .full-carousel{

@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     @users = User.all
 
     if params[:location].present?
-      @users = User.where(location: params[:location], role: 'Friend')
+      @users = User.where("location ILIKE ?", "%#{params[:location]}%")
     else
-      @users = User.where(role: 'Friend')
+      @users = User.all
     end
   end
 end
