@@ -1,13 +1,23 @@
 .container3{
   background-color: #FFFBF3;
+  h1,h2,h3{
+    font-family: serif;
+    p{
+      font-family: sans-serif;
+    }
+  }
+
 }
+
+
 
 .title3{
   padding: 15px;
-  margin-left: 110px;
+  margin-left: 120px;
   color: #696969 ;
   font-size: 40px;
   font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .carousel-inner{
@@ -21,32 +31,34 @@
 
 .Info{
   width: 38%;
-  margin-left: 130px;
+  margin-left: 140px;
   padding-top: 25px;
   border: solid;
-  border-width: 7px;
+  border-width: 3px;
   border-color: pink;
   padding-left: 20px;
   padding-bottom: 20px;
   color: #696969;
-  font-weight: bold;
+  border-radius: 10px;
 }
 
 .Meeting{
-  margin-left: 30px;
+  margin-left: 25px;
 }
 
 .Booking{
   border: solid;
-  border-width: 7px;
+  border-width: 3px;
   border-color: pink;
   padding-top: 25px;
   width: 38%;
   height: 50%;
-  margin-left: 50px;
+  margin-left: 55px;
   color: #696969;
   padding-left: 20px;
   padding-bottom: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 10px;
 }
 
 .full-carousel{
@@ -63,6 +75,5 @@
   padding-right:20px;
   margin-left: 45%;
   margin-top: 3%;
-
-
+  font-family: 'Source Sans Pro', sans-serif;
 }
