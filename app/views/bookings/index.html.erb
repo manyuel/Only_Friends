@@ -10,12 +10,12 @@
 
       <% elsif %>
           <div class="box">
-            <h2>Confirmed Bookings</h2>
+            <h2 class="text-center py-3">Confirmed Bookings</h2>
 
-            <ul>
+            <ul class="pl-90">
               <% @confirmed_bookings.each do |booking| %>
                 <div class="card-bookings">
-                  <img src="" alt="">
+                  <%= image_tag cl_image_path booking.friend.photo.key %>
                   <div class="card-bookings-info">
                     <%= link_to booking.friend.name, user_booking_path(booking.friend, booking)%>
                     <%= "| Rating: #{booking.friend.rating} | " %>
@@ -27,12 +27,12 @@
           </div>
 
           <div class="box">
-            <h2>Pending Bookings</h2>
+            <h2 class="text-center py-3">Pending Bookings</h2>
 
             <ul>
               <% @pending_bookings.each do |booking| %>
                 <div class="card-bookings">
-                  <img src="" alt="">
+                  <%= image_tag cl_image_path booking.friend.photo.key %>
                   <div class="card-bookings-info">
                     <%= link_to booking.friend.name, user_booking_path(booking.friend, booking)%>
                     <%= "| Rating: #{booking.friend.rating} | " %>
@@ -51,12 +51,12 @@
 
       <% elsif %>
           <div class="box">
-            <h2>Confirmed Bookings</h2>
+            <h2 class="text-center py-3">Confirmed Bookings</h2>
 
             <ul>
               <% @confirmed_bookings.each do |booking| %>
                 <div class="card-bookings">
-                  <img src="" alt="">
+                  <%= image_tag cl_image_path booking.costumer.photo.key %>
                   <div class="card-bookings-info">
                     <%= link_to booking.costumer.name, user_booking_path(booking.costumer, booking) %>
                     <%= "| Rating: #{booking.costumer.rating} | " %>
@@ -69,12 +69,12 @@
 
 
           <div class="box">
-            <h2>Pending Bookings</h2>
+            <h2 class="text-center py-3">Pending Bookings</h2>
 
             <ul>
               <% @pending_bookings.each do |booking| %>
                 <div class="card-bookings">
-                  <img src="" alt="">
+                  <%= image_tag cl_image_path booking.costumer.photo.key %>
                   <div class="card-bookings-info">
                     <%= link_to booking.costumer.name, user_booking_path(booking.costumer, booking) %>
                     <%= "| Rating: #{booking.costumer.rating} | " %>
