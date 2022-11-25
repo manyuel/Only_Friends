@@ -1,23 +1,41 @@
-.bookingtext {
+.bookingcard {
 
   padding: 50px;
-  margin-top: 20px;
+  margin-top: 50px;
   font-weight: bold;
   font-family: 'Merriweather', serif;
   color: #696969;
-  font-size: 20px;
-  box-shadow: 5px 5px 5px 5px;
-  margin-bottom: 30px;
+  font-size: 23px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 10px 0px;
+  margin-bottom: 20px;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .back-btn {
   background: #f2b5d0;
   text-align: center;
   color: white;
-  border-radius: 0 5px 5px 0;
-  width: 200x;
+  border-radius: 5px 5px 5px 5px;
+  width: 550x;
   margin-top: 30px;
   text-decoration: none;
-  font-weight:600;
+  font-weight:300;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.back-btn:hover {
+  background: #E45D9A;
+  text-decoration: none;
+  color: white;
+}
+
+.giphy-embed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

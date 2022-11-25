@@ -6,13 +6,13 @@
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://post.healthline.com/wp-content/uploads/2020/05/Female_Male_Conversation_1200x628-facebook-1200x628.jpg" class="d-block" alt="...">
+            <%= image_tag "222611.jpg", class:"d-block" %>
           </div>
           <div class="carousel-item">
-            <img src="https://post.healthline.com/wp-content/uploads/2019/09/Two-girlfriends-students-on-a-coffee-break-outdoors-1200x628-facebook.jpg" class="d-block" alt="...">
+            <%= image_tag "222615.jpg", class:"d-block" %>
           </div>
           <div class="carousel-item">
-            <img src="https://img.freepik.com/premium-photo/young-friends-from-diverse-cultures-races-taking-photo-making-happy-faces-youth-millennial-generation-friendship-concept-with-students-people-having-fun-together-focus-close-up-girls_166273-184.jpg?w=2000" class="d-block" alt="...">
+            <%= image_tag "222801.jpg", class:"d-block" %>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <div class="d-flex justifty-content-space-between">
+  <div class="d-flex justify-content-start">
   <div class="Info">
     <p><%= "Name: #{@user.name}" %></p>
     <p><%= "Rating: #{@user.rating}" %></p>
@@ -45,5 +45,6 @@
 </div>
 
 
-
-<%= link_to "return to friends listings", users_path %>
+<div class="BackButton">
+<%= link_to "Return to Friends listings", users_path, class: "text-decoration-none link-dark" %>
+</div>

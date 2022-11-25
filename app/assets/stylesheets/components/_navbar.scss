@@ -18,10 +18,12 @@
 }
 
 
-.search {
-  width: 100%;
-  display: flex;
-}
+// .search {
+//   width: 100%;
+//   display: flex;
+
+
+// }
 
 .searchTerm {
   width: 100%;
@@ -34,12 +36,8 @@
 
 }
 
-.searchTerm:focus{
-  color: #696969;
-}
-
 .searchButton {
-  width: 50px;
+  width: 30%;
   height: 36px;
   border: none;
   background: #f2b5d0;
