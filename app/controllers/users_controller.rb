@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def index
     if params[:location].present?
-      @users = User.where("location ILIKE ?", "%#{params[:location]}%", role: 'Friend')
+      @users = User.where("location ILIKE ?", "%#{params[:location]}%").select { |user| user.role == "Friend" }
     else
       @users = User.where(role: 'Friend')
     end
