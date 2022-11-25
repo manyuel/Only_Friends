@@ -1,6 +1,6 @@
-<h1 class="d-flex justify-content-center py-3">My Bookings</h1>
-
-<div class="container min-height">
+<div class="container-min-height">
+<%# <h1 class="d-flex justify-content-center py-3">My Bookings</h1> %>
+  <h1>My Bookings</h1>
   <div class="row">
 
     <% if current_user.role == 'Costumer' %>
@@ -9,8 +9,8 @@
         <h3 class="text-center py-3"><%= "No bookings for now..." %></h3>
 
       <% elsif %>
-          <div class="box">
-            <h2 class="text-center py-3">Confirmed Bookings</h2>
+          <div class="booking-box">
+            <h2 class="confirm">Confirmed Bookings</h2>
 
             <ul class="pl-90">
               <% @confirmed_bookings.each do |booking| %>
@@ -26,8 +26,8 @@
             </ul>
           </div>
 
-          <div class="box">
-            <h2 class="text-center py-3">Pending Bookings</h2>
+          <div class="booking-box">
+            <h2>Pending Bookings</h2>
 
             <ul>
               <% @pending_bookings.each do |booking| %>
@@ -50,7 +50,7 @@
         <h3 class="text-center py-3"><%= "No bookings for now..." %></h3>
 
       <% elsif %>
-          <div class="box">
+          <div class="booking-box">
             <h2 class="text-center py-3">Confirmed Bookings</h2>
 
             <ul>
@@ -68,7 +68,7 @@
           </div>
 
 
-          <div class="box">
+          <div class="booking-box">
             <h2 class="text-center py-3">Pending Bookings</h2>
 
             <ul>
