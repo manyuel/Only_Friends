@@ -1,78 +1,91 @@
-<h1>My Bookings.</h1>
+<h1 class="d-flex justify-content-center py-3">My Bookings</h1>
 
-<% if current_user.role == 'Costumer' %>
+<div class="container">
+  <div class="row">
 
-  <% unless @confirmed_bookings.empty? && @pending_bookings.empty? %>
+    <% if current_user.role == 'Costumer' %>
 
-    <% unless @confirmed_bookings.empty? %>
-      <div class="box">
-        <h2>Confirmed Bookings</h2>
+      <% if @confirmed_bookings.empty? && @pending_bookings.empty? %>
+        <h3 class="text-center py-3"><%= "No bookings for now..." %></h3>
 
-        <ul>
-          <% @confirmed_bookings.each do |booking| %>
-            <div>
-              <%= link_to booking.friend.name, user_booking_path(booking.friend, booking)%>
-              <%= "| Rating: #{booking.friend.rating} | " %>
-              <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel?"}%>
-            </div>
-          <% end %>
-        </ul>
-      </div>
+      <% elsif %>
+          <div class="box">
+            <h2>Confirmed Bookings</h2>
+
+            <ul>
+              <% @confirmed_bookings.each do |booking| %>
+                <div class="card-bookings">
+                  <img src="" alt="">
+                  <div class="card-bookings-info">
+                    <%= link_to booking.friend.name, user_booking_path(booking.friend, booking)%>
+                    <%= "| Rating: #{booking.friend.rating} | " %>
+                    <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel?"}%>
+                  </div>
+                </div>
+              <% end %>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h2>Pending Bookings</h2>
+
+            <ul>
+              <% @pending_bookings.each do |booking| %>
+                <div class="card-bookings">
+                  <img src="" alt="">
+                  <div class="card-bookings-info">
+                    <%= link_to booking.friend.name, user_booking_path(booking.friend, booking)%>
+                    <%= "| Rating: #{booking.friend.rating} | " %>
+                    <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel?"}%>
+                  </div>
+                </div>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+    <% elsif current_user.role == 'Friend' %>
+
+      <% if @confirmed_bookings.empty? && @pending_bookings.empty? %>
+        <h3 class="text-center py-3"><%= "No bookings for now..." %></h3>
+
+      <% elsif %>
+          <div class="box">
+            <h2>Confirmed Bookings</h2>
+
+            <ul>
+              <% @confirmed_bookings.each do |booking| %>
+                <div class="card-bookings">
+                  <img src="" alt="">
+                  <div class="card-bookings-info">
+                    <%= link_to booking.costumer.name, user_booking_path(booking.costumer, booking) %>
+                    <%= "| Rating: #{booking.costumer.rating} | " %>
+                    <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel?"}%>
+                  </div>
+                </div>
+              <% end %>
+            </ul>
+          </div>
+
+
+          <div class="box">
+            <h2>Pending Bookings</h2>
+
+            <ul>
+              <% @pending_bookings.each do |booking| %>
+                <div class="card-bookings">
+                  <img src="" alt="">
+                  <div class="card-bookings-info">
+                    <%= link_to booking.costumer.name, user_booking_path(booking.costumer, booking) %>
+                    <%= "| Rating: #{booking.costumer.rating} | " %>
+                    <button type="button" class="btn btn-success text-decoration-none text-white"><%= link_to "Confirm", confirm_path(booking) %></button>
+                    <button type="button" class="btn btn-danger text-decoration-none text-white"><%= link_to "Reject", reject_path(booking) %></button>
+                  </div>
+                </div>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
     <% end %>
-
-    <% unless @pending_bookings.empty? %>
-      <div class="box">
-        <h2>Pending Bookings</h2>
-
-        <ul>
-          <% @pending_bookings.each do |booking| %>
-            <div class="list">
-              <%= link_to booking.friend.name, user_booking_path(booking.friend, booking)%>
-              <%= "| Rating: #{booking.friend.rating} | " %>
-              <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel?"}%>
-            </div>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  <% end %>
-
-<% elsif current_user.role == 'Friend' %>
-
-  <% unless @confirmed_bookings.empty? && @pending_bookings.empty? %>
-
-    <% unless @confirmed_bookings.empty? %>
-      <div class="box">
-        <h2>Confirmed Bookings</h2>
-
-        <ul>
-          <% @confirmed_bookings.each do |booking| %>
-            <div>
-            <%= link_to booking.costumer.name, user_booking_path(booking.costumer, booking) %>
-              <%= "| Rating: #{booking.costumer.rating} | " %>
-              <%= link_to 'Cancel', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel?"}%>
-            </div>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <% unless @pending_bookings.empty? %>
-      <div class="box">
-        <h2>Pending Bookings</h2>
-
-        <ul>
-          <% @pending_bookings.each do |booking| %>
-            <div class="list">
-              <%= link_to booking.costumer.name, user_booking_path(booking.costumer, booking) %>
-              <%= "| Rating: #{booking.costumer.rating} | " %>
-              <%= link_to "Confirm", confirm_path(booking) %>
-              <%= link_to "Reject", reject_path(booking) %>
-            </div>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  <% end %>
-
-<% end %>
+  </div>
+</div>
