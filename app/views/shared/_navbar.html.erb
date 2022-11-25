@@ -5,17 +5,16 @@
         <%= image_tag "logo.png", class:"logo" %>
       <% end %>
 
-  <div class=<%= current_page?(root_path) ? "d-none" : "wrap" %>>
+  <div class=<%= current_page?(users_path) ? "wrap" : "d-none" %>>
     <div class="search">
         <%= form_with url: users_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :location,
             params[:location],
-            class: "form-control",
+            class: "searchTerm",
             placeholder: "Search by Location"
           %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
+          <%= submit_tag "Search", class: "searchButton" %>
         <% end %>
-        <i class="fa fa-search"></i>
     </div>
   </div>
 

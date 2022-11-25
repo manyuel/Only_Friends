@@ -8,10 +8,10 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    if params[:query].present?
-      @users = User.where(location: params[:location])
+    if params[:location].present?
+      @users = User.where(location: params[:location], role: 'Friend')
     else
-      @movies = User.all
+      @users = User.where(role: 'Friend')
     end
   end
 end

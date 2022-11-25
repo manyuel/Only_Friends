@@ -44,6 +44,10 @@ file = open("app/assets/images/paulina.jpg")
 paulina.photo.attach(io: file, filename: "nes.png", content_type: "image/jpeg")
 paulina.save
 
+file = open("app/assets/images/222710.jpg")
+manuel.photo.attach(io: file, filename: "nes.png", content_type: "image/jpeg")
+manuel.save
+
 puts "creating costumers"
 User.create!(name: "Rick", role: "Costumer", rating: 1, bio: "Likes boardgames & videogames", email: "rick@email.com", password: "password123")
 User.create!(name: "Mia", role: "Costumer", rating: 2, bio: "Likes outdoors & brain teasers", email: "mia@email.com", password: "password123")
