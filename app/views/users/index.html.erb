@@ -11,12 +11,13 @@
             <% else %>
               <img src="https://source.unsplash.com/random/400x250" alt="" class="">
             <% end %>
-              <div class="card-product-infos bg-light">
+              <div class="card-product-infos bg-light rounded-bottom">
                 <div>
                     <h3 class="card-name text-decoration-none" link-light> <%=user.name%> </h3>
                     <p class="card-description"><%=user.bio%></p>
                 </div>
                     <p class="card-trip-pricing">£<%= user.rate %> </p>
+                    <p class="card-location">📍<%= user.location %> </p>
               </div>
           <% end %>
         </div>
