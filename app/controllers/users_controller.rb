@@ -6,12 +6,10 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
-
     if params[:location].present?
-      @users = User.where("location ILIKE ?", "%#{params[:location]}%")
+      @users = User.where("location ILIKE ?", "%#{params[:location]}%", role: 'Friend')
     else
-      @users = User.all
+      @users = User.where(role: 'Friend')
     end
   end
 end

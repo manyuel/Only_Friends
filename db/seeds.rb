@@ -21,7 +21,6 @@ pedro = User.create!(name: "Pedro Mendoza", role: "Friend", rate: 531.49, locati
 
 manuel = User.create!(name: "Manuel Sanchez", role: "Friend", rate: 175, location: "Hackney", rating: 5, bio: "Keen traveller looking to make new friends in London", email: "manueltheg@gmail.com", password: "password123")
 
-
 file = open("app/assets/images/lady1.jpeg")
 julia.photo.attach(io: file, filename: "nes.png", content_type: "image/jpeg")
 julia.save
