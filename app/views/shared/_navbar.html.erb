@@ -13,23 +13,6 @@
       </button>
     </div>
   </div>
-  <%# <ul class="navbar-nav"> kdicdklicdic
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-bars"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Account</a></li>
-
-              <li><%=link_to "Bookings",
-                    bookings_path,
-                    <%# class: "dropdown-item"
-              <%# <li><a class="dropdown-item" href="#">Log Out</a></li>
-           </ul>
-          </li>
-       </ul>
-    </div> %>
-
-
 
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,11 +22,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
-            <li class="nav-item active">
-              <%= link_to "Bookings", bookings_path, class: "nav-link" %>
-              <% if current_user.role == "Costumers" %>
-               <%= link_to "All Friends", users_path, class: "nav-link" %>
-               <% end %>
+            <li class="nav-item active d-flex">
+              <% if current_user.role == "Costumer" %>
+                <%= link_to "All Friends", users_path, class: "nav-link" %>
+                <%= link_to "Bookings", bookings_path, class: "nav-link" %>
+              <% elsif current_user.role == "Friend" %>
+                <%= link_to "Bookings", bookings_path, class: "nav-link" %>
+              <% end %>
             </li>
             <% if current_user.photo.present? %>
               <li class="nav-item dropdown">

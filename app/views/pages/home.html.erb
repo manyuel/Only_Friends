@@ -1,4 +1,3 @@
-
 <div class = "main-card" >
 
 
@@ -23,11 +22,13 @@
             </div>
 
         <div class="see-friends-btn">
-        <% if user_signed_in? && current_user.role == "Costumer" %>
-          <%= link_to "My Bookings", bookings_path, class: "text-decoration-none link-light"%>
-        <% else %>
-          <%= link_to "View All Friends", users_path, class: "text-decoration-none link-light"%>
-        <% end %>
+          <% if user_signed_in? && current_user.role == "Costumer" %>
+            <%= link_to "View All Friends", users_path, class: "text-decoration-none link-light"%>
+          <% elsif user_signed_in? && current_user.role == "Friend" %>
+            <%= link_to "My Bookings", bookings_path, class: "text-decoration-none link-light"%>
+          <% else %>
+            <%= link_to "Log In", user_session_path, class: "text-decoration-none link-light"%>
+          <% end %>
         </div>
 
       <div class="footer d-flex justify-content-end">

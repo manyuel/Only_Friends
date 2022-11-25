@@ -31,12 +31,13 @@
     <p><%= "About me: #{@booking.friend.bio}" %></p>
   </div>
 
-  <%= link_to "Return to My Bookings", users_path %>
+  <%= link_to "Return to My Bookings", bookings_path %>
   <%= link_to "Return to Friends Listing", users_path %>
 
 <% elsif current_user.role == 'Friend' %>
 
-  <h2 class="d-flex px-4 py-3">You have a friendship request</h2>
+
+  <h2 class="d-flex px-4 py-3"><%= "#{@booking.costumer.name} wants to hang out" %></h2>
 
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -67,6 +68,5 @@
   </div>
 
   <%= link_to "Return to My Bookings", bookings_path %>
-  <%= link_to "Return to Friends Listing", users_path %>
 
 <% end %>
