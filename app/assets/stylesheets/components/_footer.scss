@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  bottom: 0;
+}
+
+.footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #EB89B5;
+  color: white;
+  p {
+    margin: 0
+  }
+}
+
+.min-height {
+  min-height: 100vh;
+}
+
+.address {
+  text-align: right;
+}
